@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conversor binario</title>
+</head>
+<body>
+  <input type = "number" name = "number"  placeholder= "Numero binario ( 0 ou 1 )" max = "1" id = "number">
+  <input type = "button" value = "check" onclick = "binary()">
+  <script>
+    function binary(){
+      var num = document.getElementById("number").value;
+      var sum = 0;
+      var i = 0;
+      while(num){
+        sum = sum + Math.pow(2,i) * (num % 10);
+        i++;
+        num = parseInt( num/10 );
+      }
+      alert(sum);
+    }
+  </script> 
+</body>
+</html>
+
+
+
